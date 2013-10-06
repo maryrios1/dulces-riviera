@@ -75,7 +75,7 @@
     			
     			if(isMobile){
     				$("head").append('<meta name="viewport" id="vpFerroSlider" content="width=device-width, height=device-height, user-scalable=no, initial-scale='+(1/window.devicePixelRatio)+', minimum-scale = '+(Math.round((1/window.devicePixelRatio)*100)/100)+', maximum-scale = '+(Math.round((1/window.devicePixelRatio)*100)/100)+';"/>');
-    				if(screen.width > 1024 || screen.height > 2000){
+    				if(screen.width > 780 || screen.height > 1030){
     						window.location.reload();
     				}
     			}
@@ -239,7 +239,8 @@
 		        					},0);
 		    						window.location.hash = "#!"+toMove.id;
 		    						actualElementObject = toMove;
-		    						
+		    						$("ul#BarMenu li a img.selectedOP").removeClass("selectedOP");
+									$("ul#BarMenu li." +toMove.id + " a img").addClass("selectedOP");
 		    						destroyEvent('endslide');
 									triggerEvent('endslide',actualElementObject,toMove);
 		    					});
