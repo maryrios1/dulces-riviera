@@ -1,0 +1,43 @@
+body{width:600; height:600;}
+ul.tabs {
+	background: url(tab.png) no-repeat;
+	margin: 0;
+	padding: 0;	
+	list-style: none;
+	width: 167px;
+	height: 176px; /*-- Ajustar la altura de las pestañas--*/
+	position: absolute;
+	bottom: 280px;
+	margin-left: 840px;	/*--1130--*/	
+	z-index: 99;
+}
+ul.tabs li {		
+	height: 70px; /*--Resta 1px desde lo alto de la lista desordenada--*/	
+	overflow: hidden;			
+}
+ul.tabs li a {
+	text-decoration: none;	
+	display: none;
+	font-size: 1.2em;
+	padding: 0 20px;	
+	outline: none;
+}
+ul.tabs li a:hover {
+	background: color: rgba(255,233,255,0.5);
+	
+}
+html ul.tabs li.active, html ul.tabs li.active a:hover  { /*--Se asegura de que la pestaña activa no escucha a las propiedades hover--*/
+	background: color: rgba(255,233,255,0.5);
+	/*border-bottom: 1px solid #fff; --Hace que el activo como la pestaña que está conectado con su contenido--*/
+}
+.tab_container {	
+	border-top: none;
+	overflow: hidden;
+	clear: both;
+	left: 40px; right:0px; margin: auto; top:4%; z-index:97; position:absolute;
+}
+.tab_content {
+	padding: 10px;
+	font-size: 1.2em;
+
+}
