@@ -1,0 +1,70 @@
+/*font*/
+@font-face{
+font-family: Palatino Linotype;
+src: url(fuentes/pala.ttf) format('truetype');
+font-weight: 100;
+}
+a{ text-decoration: none;}
+/*HEADER*/
+	/*barra horizontal*/
+	#barra{
+		width: 100%;
+		height: 50px;
+		margin-top: 0px;
+		z-index:4;
+		position:fixed;
+		background: #FFFFFF;
+		border-bottom: 5px solid #ffb800;
+		box-shadow: 0 5px 0px 14px rgba(0,0,0,0.1);
+	}
+	#contenedor{
+		width: 1024px;
+		margin-top:0px;
+		position: relative;
+		margin: 0px auto 0px;
+		height: 85px;
+		overflow: hidden;
+	}
+		#menu{
+			width: 565px;
+			height:75px;
+			margin: 0px auto 0px;
+			background: #FFFFFF;
+			z-index:5;
+			position:relative;
+			border: 1px solid #d2d2d2;
+			border-top: 1px solid #ffffff;
+			box-shadow: 0px 55px 0px 5px rgba(0,0,0,0.1);
+			font-family: "Palatino Linotype", serif;
+		}
+			/*elementos del menu*/
+			#menu ul li{display: inline; position: absolute; height: 75px;}
+			#menu ul li a img {margin-top: 30px;}
+			#menu ul li a img:hover{border-bottom: 2px solid #ffb800;}
+			.historia{margin-left: 5px; padding-right: 5px; border-right: 1px solid #d2d2d2;}
+			.productos{margin-left: 115px; padding-right: 5px; border-right: 1px solid #d2d2d2;}
+			.dulce{margin-left: 225px; padding-right: 5px; border-right: 1px solid #d2d2d2;}
+			.interesa{margin-left:350px; padding-right: 5px; border-right: 1px solid #d2d2d2;}
+			.recetario{margin-left:460px; padding-right: 5px;}
+		#certificaciones{
+			float: right; margin-top: -75px; z-index: 6;
+		}
+		#contactos{
+			float: left; margin-top: -75px; z-index: 6; margin-left:20px; z-index:100;
+		}
+#banderin{z-index:100; left:70px; top:35px; position:fixed; width:266px; height:150x;}
+/*FOOTER*/
+#footer { 
+	margin:0 auto; height:35px; width:100%; bottom:0px; left:0; z-index:4; background: #ffffff; position:fixed; border-top: 5px solid #284711;
+}
+	/*elementos del footer*/
+	#bestground { 
+		float:left; margin:0px 10px 0 15px; line-height:42px; 
+	}
+	#copyright{ float:right; margin-top:5px; }
+	#logo{
+		position:absolute; z-index:100; left:45%; top:-90px;
+	}
+#contenedorb { 
+	overflow:hidden; height:100%; position:relative; z-index:5; margin: 0px auto 0px; 
+}

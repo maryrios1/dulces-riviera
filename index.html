@@ -1,0 +1,391 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="it">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=8" />
+		<title>Dulce Riviera</title>	
+		<link rel="shortcut icon" href="img/dulce.ico" type="image/x-icon" />
+		<meta name="description" content="Oficial Web Dulce Riviera" />
+		<meta name="keyworks" content="Dulce, Riviera, Endulzante, sabor, Natural, Agave, Azul, sin calorias, organico, sabor natural" />
+		<link rel="stylesheet" rev="stylesheet" href="css/reset.css" type="text/css" media="all">		
+  		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/estilo.css" />
+		<link rel="stylesheet" href="css/varios.css" />
+  		<link rel="stylesheet" href="css/jquery.ferro.ferroSlider.css" />
+		
+		<!--<script src="script/responsiveimg.js" type="text/javascript"></script>-->
+		<script src="script/jquery.min.js" type="text/javascript"></script>
+		<script src="script/jquery.easing.1.3.js" type="text/javascript"></script>
+		<script src="script/jquery.ferro.ferroSlider-1.2.js" type="text/javascript" language="javascript"></script>
+		<script src="script/script.js" type="text/javascript" language="javascript"></script>
+	</head>
+	
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$(".slidingSpaces").ferroSlider({
+				easing					: 'jswing',
+				createMap				: false,
+				createPlayer			: true,
+				feedbackArrows			: true,
+				mapPosition				: false,//'bottom_center'
+			});
+		});
+	</script>
+	<!--SCRIPT DIV 1 TAB-->
+	<script type="text/javascript">
+			$(document).ready(function(){
+				$("ul#navigation li a").click(function() {
+					$("ul#navigation li").removeClass("selected");
+					$(this).parents().addClass("selected");
+					return false;
+					
+				});
+			});
+		</script>
+		<script type="text/javascript">
+			//tabbing works!
+			$(document).ready(function() {
+				$("#tab_container div").hide(); // Initially hide all content
+    
+				$('#navigation a').click(function(e) {
+					e.preventDefault();        
+					$("#tab_container div").hide(); //Hide all content
+					$("#navigation li").attr("id",""); //Reset id's
+					$(this).parent().attr("id","current"); // Activate this
+					$('#' + $(this).attr('title')).fadeIn(); // Show content for current tab
+				});
+			})();
+		</script>
+		<script type="text/javascript">
+			//segundo tabbing a ver si jala
+			$(document).ready(function() {
+				$("#tab_historychannel div").hide(); // Initially hide all content
+				$("#tab_historychannel div:first").fadeIn(); 
+    
+				$('#navigation a').click(function(e) {
+					e.preventDefault();        
+					$("#tab_historychannel div").hide(); //Hide all content
+					$("#navigation li").attr("id",""); //Reset id's
+					$(this).parent().attr("id","current"); // Activate this
+					$('#' + $(this).attr('title')).fadeIn(); // Show content for current tab
+				});
+			})
+			();
+		</script>
+		<script>
+		function solonum(evt)
+		  {
+			var keyPressed = (evt.which) ? evt.which : event.keyCode
+			return !(keyPressed > 31 && (keyPressed < 48 || keyPressed > 57));
+		  }
+		function verificar(){
+			if (document.contacto.nombre.value.length==0){
+				alert("Tiene que escribir un nombre")
+				document.contacto.nombre.focus()
+				return 0;
+			}
+			var s="no";
+			for ( var i = 0; i < document.contacto.sexo.length; i++ )
+			{
+				if ( document.contacto.sexo[i].checked ){
+					s= "si";
+					break;
+				}
+			}
+			if ( s == "no" ){
+				alert( "Debe seleccionar el sexo" ) ;
+				return 0;
+			}
+			if (document.contacto.edad.value.length==0){
+				alert("Tiene que ingresar su edad")
+				document.contacto.edad.focus()
+				return 0;
+			}
+			if (document.contacto.ocupacion.value.length==0){
+				alert("Tiene que ingresar su ocupacion")
+				document.contacto.ocupacion.focus()
+				return 0;
+			}
+			if (document.contacto.mail.value.indexOf('@') == -1) {
+				alert ("La \"Dirección de Email\" no es correcta"); 
+				document.contacto.mail.focus() ;
+				return 0;
+			} 
+			if (document.contacto.empresa.value.length==0){
+				alert ("Tiene que ingresar su empresa"); 
+				document.contacto.empresa.focus() ;
+				return 0;
+			} 
+			if (document.contacto.puesto.value.length==0){
+				alert ("Tiene que ingresar su puesto"); 
+				document.contacto.puesto.focus() ;
+				return 0;
+			} 
+			var indice = document.contacto.asunto.selectedIndex;
+			var valor = document.contacto.asunto.options[indice].value;
+			if (valor==0){
+				alert("Ingresa un asunto valido")
+				document.contacto.asunto.focus()
+				return 0;
+			}
+			if (document.contacto.mensaje.value.length==0){
+				alert ("Tiene que ingresar su mensaje"); 
+				document.contacto.mensaje.focus() ;
+				return 0;
+			} 
+			else{
+				alert ("Tu mensaje se ha enviado satisfactoriamente, en un momento te redireccionaremos a la página principal.");
+			}
+			document.contacto.submit();
+		}
+	</script>
+	<body onload="document.getElementById('loader').style.display='none';">
+		<div id="loader" style="position:absolute; width:100%; height:100%; background-color:#ffffff; z-index:1005; text-align:center; padding-top:100px; font-size:20px; font-family:Arial; color:#000000;">
+			<p>Cargando...</p>
+			<img height="100" width="100" src="img/loading.gif" />
+		</div>
+		
+		<div id="banderin"><img src="img/banderin.png"></div>
+		<!--La barra blanca, contiene todo para que permanezca fijo-->
+		<div id="barra">		
+			<!--El contenedor del menu, la certificacion y lo otro"-->
+			<div id="contenedor">
+				<div id="menu">
+					<ul>
+						<li class="historia">
+							<a id="slidingSpacesNavigationDot_div2" class="slidingSpacesNavigationDot" href="#historia">
+								<img src="img/menu/historia.jpg" />
+							</a>
+						</li>
+						<li class="productos">
+							<a href="#productos" id="slidingSpacesNavigationDot_div3" class="slidingSpacesNavigationDot">
+								<img src="img/menu/productos.jpg" />
+							</a>
+						</li>
+						<li class="dulce">
+							<a href="#dulce" id="slidingSpacesNavigationDot_div1" class="slidingSpacesNavigationDot">
+								<img src="img/menu/dulce.jpg" />
+							</a>
+						</li>
+						<li class="interesa">
+							<a id="slidingSpacesNavigationDot_div4" class="slidingSpacesNavigationDot" href="#contacto">
+								<img src="img/menu/interesa.jpg" />
+							</a>
+						</li>
+						<li class="recetario">
+							<a id="slidingSpacesNavigationDot_div5" class="slidingSpacesNavigationDot" href="#recetario">
+								<img src="img/menu/recetario.jpg" />
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div id="certificaciones">
+					<img src="img/certificaciones/usda.png"> <img src="img/certificaciones/kosher.png"> <img src="img/certificaciones/oko.png"> <img src="img/certificaciones/naturland.png"> <img src="img/certificaciones/jas.png"> <img src="img/certificaciones/glycemic.png"> <img src="img/certificaciones/hojav.png">
+			</div>
+			<div id="contactos">
+				<a href="#contacto" class="slidingSpacesNavigationDot"><img src="img/certificaciones/llamanos.png" width="59px" height="25px"></a> <a href="#contacto" class="slidingSpacesNavigationDot"><img src="img/certificaciones/escribenos.png" width="70px" height="25px"></a> <a href="http://www.facebook.com/dulce.riviera.35" target="_blank" ><img src="img/certificaciones/fb.png" width="70px" height="25px"></a>
+			</div>
+		</div>
+		<!--La historia-->
+		<div id="historia" class="slidingSpaces demo1" title="">
+			<div id="contdiv2">
+				<div id="senalhist">
+					<ul id="navigation">
+						<li><a href="#" title="Historia">&#160;&#160;&#160;&#160;&#160;&#160;&#160;</a></li><!-- historia -->
+						<li><a href="#" title="Galeria">&#160;&#160;&#160;&#160;&#160;&#160;&#160;</a></li><!-- galeri --> 
+						<!--<li><a href="#" title="Dulce">&#160;&#160;&#160;&#160;&#160;&#160;&#160;</a></li><!-- dulce -->	
+					</ul>
+				</div>
+				<div id="tab_historychannel">
+					<div id="Historia">
+						<img src="img/contenido/div2/hist.png">
+					</div>
+					<div id="Galeria">
+						<img src="img/contenido/div2/gale.png">
+					</div>
+				</div>
+				<img class="pantalla" src="img/contenido/div2/pantalla.png">
+				<!--<iframe src ="img/contenido/div2/html.html" width="100%" height="100%" ></iframe>-->
+			</div>
+		</div>
+		
+			<!--Productos-->
+		<div id="productos" class="slidingSpaces demo1" title="">
+			<div id="fondtext">
+				<div id="titulo">PRESENTACIÓN<br>
+					- PET de 660 g
+				</div>
+				<div id="text">PROPIEDADES FUNCIONALES<br>
+					<p><span>• Edulcorante: </span>Se puede utilizar como un endulzante 100% natural ideal para el consumo humano de forma directa, teniendo como una de sus características principales su poder edulcorante mayor al del azúcar común, consecuentemente tiene un valor dietético.</p>
+					<p><span>• Potencializador de sabor: </span>Mejora o intensifica los sabores de otros alimentos tales como frutas, néctares, etc., esto presenta la oportunidad de formular productos con niveles reducidos de endulzantes, aderezos ácidos u otros ingredientes.</p>
+					<p><span>• Fácil asimilación</span><br>
+					Por su alto contenido de fructosa no requiere de insulina en las primeras fases de su metabolización.</p>
+					<p>Otras propiedades importantes son su alta pureza, color y transparencia natural, fácil manejo y almacenaje, excelente sabor, ahorro de calorías y no causa caries.
+				</div>
+			</div>
+		</div>
+		
+		<!--Dulce Riviera-->
+		<div id="dulce" class="slidingSpaces demo1" title="">
+			<div id="contenedor1">
+				<ul id="navigation" class="loque">
+					<li class="que"><a href="#" title="que">¿qué es?</a></li>
+					<li class="comparativo">
+						<a href="#" title="compara">
+						<small class="ache3">comparativos</small><br />
+						<small class="ache4">de endulcorantes</small><br />
+						<small class="ache2">en calorias</small><br /><br />
+						</a>
+					</li>
+					<li class="ventajas">
+						<a href="#" title="ventaja">
+						<small class="ache2">ventajas de</small><br />
+						<small class="cons">consumir jarabe</small><br />
+						<small class="ache1">de agave</small><br /><br />
+						</a>
+					</li>
+					<li class="mision2">
+						<a href="#" title="misvis">
+						<small class="mision">mision y vision</small>
+						</a>
+					</li>
+				</ul>
+				<ul id="senaltext"><a href="#">
+					<li><a href="#historia" class="slidingSpacesNavigationDot">Galeria</a></li>
+					<li><a href="#contacto" class="slidingSpacesNavigationDot">Contacto</a></li>
+					<li><a href="#recetario" class="slidingSpacesNavigationDot">Recetario</a></li>
+				</ul>
+				<img class="slogan" src="img/contenido/div1/slogan.png">
+				<img class="senal" src="img/contenido/div1/senalamiento.png">
+				<a href="#"><img class="yt" src="img/contenido/div1/youtube.png"></a>
+				<img class="bottle" src="img/contenido/div1/botella.png">
+				<!--TABBER-->
+				<div id="tab_container">
+					<!--TAB QUE ES-->
+					<div id="que">
+						<img src="img/contenido/div1/tab1.png" border="0"/>
+					</div>
+					<!--TAB COMPARATIVOS-->
+					<div id="compara">
+						<img src="img/contenido/div1/tab2.png" border="0"/>
+					</div>
+					<!--TAB VENTAJAS-->
+					<div id="ventaja">
+						<ul id="navigation" class="ventab">
+							<li><a href="#" title="ventaja">1</a></li>
+							<li><a href="#" title="ventaja2">2</a></li>
+						</ul>
+						<img src="img/contenido/div1/tab3.png" border="0"/>
+					</div>
+					<!--TAB VISION-->
+					<div id="misvis">
+						<img src="img/contenido/div1/tab4.png" border="0"/>
+					</div>
+					<!--TAB VENTAJAS 2-->
+					<div id="ventaja2">
+						<ul id="navigation" class="ventab">
+							<li><a href="#" title="ventaja">1</a></li>
+							<li><a href="#" title="ventaja2">2</a></li>
+						</ul>
+						<img src="img/contenido/div1/tab3_2.png" border="0"/>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!--contacto directo-->
+		<div id="contacto" class="slidingSpaces demo1" title="">
+			<div id="contact">
+				<table width="570" border="0" cellspacing="1" cellpadding="1">
+					<form action="enviar.php" method="post" name="contacto">
+					<tr>
+						<td colspan="6"><span>En Dulce Riviera trabajamos constantemente para ofrecer un servicio de calidad, oportuno y eficiente, bajo estos principios tus comentarios son los más importante como lo es atender tus peticiones, solicitudes e interés de compra, te invitamos a comunicarte con nosotros, tus palabras son lo mas importante.</span></td>
+					</tr>
+					<tr>
+					  <td colspan="6" align="center" valign="middle">&nbsp;</td>
+					  </tr>
+					<tr>
+						<td width="124" align="right" valign="middle"><label for="name">Nombre:</label></td>
+						<td width="18">&nbsp;</td>
+						<td width="193" align="left" valign="middle"><input type="text"  id="nombre" name="nombre"></td>
+						<td colspan="2" align="left" valign="middle">Asunto:</td>
+						<td width="161" align="left" valign="middle"><select name="asunto" id="asunto">
+						  <option value="" selected="selected"> - Selecciona - </option>
+						  <option value="Ventas"> - Ventas</option>
+						  <option value="Mayoreo"> - Ventas Mayoreo</option>
+						  <option value="Negocios"> - Opcion de Negocio</option>
+						  <option value="Otros"> - Otros</option>
+					    </select></td>
+					</tr>
+					<tr>
+					  <td align="right" valign="middle"><label for="sexo">Sexo:</label></td>
+						<td valign="middle">&nbsp;</td>
+						<td colspan="2" align="left" valign="middle"><input type="radio" name="sexo" id="sexo" value="femenino">Femenino
+					  <input type="radio" name="sexo" value="masculino">Masculino</td>
+						<td width="157" align="left" valign="middle">Comentarios:</td>
+						<td align="left" valign="middle">&nbsp;</td>
+					</tr>
+					<tr>
+						<td align="right" valign="middle"><label for="edad">Edad:</label></td>
+						<td>&nbsp;</td>
+						<td colspan="2" align="left" valign="middle"><input type="text"  id="edad" name="edad" onkeypress="return solonum(event)"></td>
+						<td align="left" valign="middle">&nbsp;</td>
+						<td align="left" valign="middle"><textarea id="mensaje" name="mensaje"></textarea></td>
+					</tr>
+					<tr>
+						<td align="right" valign="middle"><p><label for="ocupacion">Ocupación:</label></p></td>
+						<td>&nbsp;</td>
+						<td colspan="4" align="left" valign="middle"><input type="text"  id="ocupacion" name="ocupacion"></td>
+					</tr>
+					<tr>
+						<td align="right" valign="middle"><label for="mail">Email:</label></td>
+						<td>&nbsp;</td>
+						<td colspan="4" align="left" valign="middle"><input type="text"  id="mail" name="mail"></td>
+					</tr>
+					<tr>
+						<td align="right" valign="middle"><label for="empresa">Empresa:</label></td>
+						<td>&nbsp;</td>
+						<td colspan="4" align="left" valign="middle"><input type="text"  id="empresa" name="empresa"></td>
+					</tr>
+					<tr>
+						<td align="right" valign="middle"><label for="empresa">Puesto:</label></td>
+						<td>&nbsp;</td>
+						<td colspan="4" align="left" valign="middle"><input type="text"  id="puesto" name="puesto"></td>
+					</tr>
+					<tr>
+						<td colspan="6" align="right" valign="middle"><p>&nbsp;</p></td>
+					 </tr>
+					<tr>
+						<td class="benviar" colspan="6">
+							<a href="#" onclick="verificar()"><img src="img/contenido/div4/buzon.png"/></a>
+						</td>
+					</tr></form>
+				</table>
+				<!--<img class="buzon" src="img/contenido/div4/buzon.png">-->
+				<img class="info" src="img/contenido/div4/info.png">
+			</div>
+		</div>
+		
+			<!--ideas que amaras-->
+		<div id="recetario" class="slidingSpaces demo1" title="">
+			Próximamente
+		</div>
+		<!--footer-->
+		<div id="footer">
+			<div id="contenedorb">
+				<div id="bestground">
+					<img src="img/bestground.png">
+				</div>				
+				<div id="copyright">
+						<img src="img/copyright.png"> <a href="../ENG/index.html"><img src="img/lang/en.png"></a> <img src="img/lang/es.png"> <a href="../FRA/index.html"><img src="img/lang/fr.png"></a>
+				</div>
+			</div>
+			<div id="logo">
+					<img src="img/logo.png">
+				</div>
+		</div>
+		
+		
+	</body>
+</html>
