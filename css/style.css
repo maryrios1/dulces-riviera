@@ -6,11 +6,11 @@ html{
 body{
 	height: 100%;
 	width:100%;
- /*width: 5120px;*/
-	font: normal 1em Cambria, Georgia, serif;
+ 	width: 5120px;
+ 	font: normal 1em Cambria, Georgia, serif;
 	position:absolute;
-	/*background: url(../img/bg.jpg)no-repeat left center;
-	background-size: 500% 100%;*/
+	background: url(../img/bg.jpg)no-repeat left center;
+	background-size: 500% 100%;
 
 }
 

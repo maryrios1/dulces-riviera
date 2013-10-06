@@ -45,12 +45,20 @@
 	
 /*DIV2 hist*/
 	#contdiv2{width: 1024px; height: 499px; z-index: 2; margin: 0px auto 0px; margin-top: 70px; margin-left: 0px;}
-	#senalhist{background: url(../img/contenido/div2/tab.png) no-repeat;
+	#senalhist{
+		/*background: url(../img/contenido/div2/tab.png) no-repeat;
 		margin: 0; padding: 0;	
 		width: 200px; height: 300px;
 		position: absolute;
 		margin-left: 940px;
 		bottom: 105px;
+		line-height: 190%;*/
+		background: url(../img/contenido/div2/tab.png) no-repeat;
+		margin: 0; padding: 0;	
+		width: 300px; height: 300px;
+		position: absolute;
+		margin-left: 960px;
+		bottom: 85px;
 		line-height: 190%;
 	}
 	#tab_historychannel{position: absolute; margin-top:33px; margin-left: 185px;}
