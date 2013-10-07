@@ -90,6 +90,6 @@
 	#contact{width: 1024px; margin: 0px auto 0px; margin-top: 70px; margin-left: 120px;}
 	#contact table{ margin-left: 210px; font-family: "Trebuchet MS", Arial, Helvetica, sans-serif; font-size: 10px; color:#000000; text-align: justify;}
 	span{ width:100px; font-family: "Trebuchet MS", Arial, Helvetica, sans-serif; font-size: 10px; color:#000000;}
-	.info {position: absolute; margin-left: 820px; margin-top: -290px; z-index:2;}
+	.info {position: absolute; margin-left: 820px; margin-top: -300px; z-index:2;}
 	.buzon{position: absolute; margin-left: 660px; margin-top: -120px; z-index:2;}
 	/*textarea { resize: none; height: 100px;}*/

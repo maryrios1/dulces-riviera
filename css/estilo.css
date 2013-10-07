@@ -42,9 +42,14 @@ a{ text-decoration: none;}
 			#menu ul li a img {margin-top: 30px;}
 			#menu ul li a img:hover{border-bottom: 2px solid #ffb800;}
 			.selectedOP {border-bottom: 2px solid #ffb800}
-			.historia{margin-left: 5px; padding-right: 5px; border-right: 1px solid #d2d2d2;}
+			/*.historia{margin-left: 5px; padding-right: 5px; border-right: 1px solid #d2d2d2;}
 			.productos{margin-left: 115px; padding-right: 5px; border-right: 1px solid #d2d2d2;}
 			.dulce{margin-left: 225px; padding-right: 5px; border-right: 1px solid #d2d2d2;}
+			.contacto{margin-left:350px; padding-right: 5px; border-right: 1px solid #d2d2d2;}
+			.recetario{margin-left:460px; padding-right: 5px;}*/
+			.dulce{margin-left: 5px; padding-right: 5px; border-right: 1px solid #d2d2d2;}
+			.productos{margin-left: 130px; padding-right: 5px; border-right: 1px solid #d2d2d2;}
+			.historia{margin-left: 240px; padding-right: 5px; border-right: 1px solid #d2d2d2;}			
 			.contacto{margin-left:350px; padding-right: 5px; border-right: 1px solid #d2d2d2;}
 			.recetario{margin-left:460px; padding-right: 5px;}
 		#certificaciones{

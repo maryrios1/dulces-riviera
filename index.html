@@ -22,13 +22,19 @@
 	</head>
 	
 	<script type="text/javascript">
+	var matrix = [
+    [
+        {full:1},{full:1},{full:1,first:true},{full:1},{full:1}
+    ]
+];
 		$(document).ready(function() {
 			$(".slidingSpaces").ferroSlider({
-				easing					: 'jswing',
+				easing					: 'easeOutExpo',//'jswing',
 				createMap				: false,
 				createPlayer			: true,
 				feedbackArrows			: true,
-				mapPosition				: false,//'bottom_center'
+				mapPosition				: true,//'bottom_center'
+				time					: 300
 			});
 		});
 	</script>
@@ -148,6 +154,18 @@
             	});
 		});
 	</script>
+    <script type="text/javascript">
+		function SelectOption(option){
+			$("ul#BarMenu li a img.selectedOP").removeClass("selectedOP");
+
+			/*$('ul#BarMenu li a img#' + option).addClass("selectedOP");
+			$('ul#BarMenu li a img.' + option).addClass("selectedOP");*/
+			/*var d = window.document.getElementById(option);
+			d.classList.add("selectedOP");*/
+ 			document.getElementById(option).setAttribute("class", "selectedOP");
+		}
+			
+	</script>
 	<body onload="document.getElementById('loader').style.display='none';">
 		<div id="loader" style="position:absolute; width:100%; height:100%; background-color:#ffffff; z-index:1005; text-align:center; padding-top:100px; font-size:20px; font-family:Arial; color:#000000;">
 			<p>Cargando...</p>
@@ -161,29 +179,34 @@
 			<div id="contenedor">
 				<div id="menu">
 					<ul id="BarMenu">
-						<li class="historia">
-							<a id="slidingSpacesNavigationDot_div2" class="slidingSpacesNavigationDot" href="#historia">
-								<img class="selectedOP" src="img/menu/historia.jpg" />
+                    
+	                    <li class="dulce">
+							<a href="#dulce" id="slidingSpacesNavigationDot_div1" class="slidingSpacesNavigationDot">
+								<img id="dulceImg" class="selectedOP" src="img/menu/dulce.jpg" />
 							</a>
 						</li>
+                        
+						
 						<li class="productos">
 							<a href="#productos" id="slidingSpacesNavigationDot_div3" class="slidingSpacesNavigationDot">
-								<img src="img/menu/productos.jpg" />
+								<img id="productosImg" src="img/menu/productos.jpg" />
 							</a>
 						</li>
-						<li class="dulce">
-							<a href="#dulce" id="slidingSpacesNavigationDot_div1" class="slidingSpacesNavigationDot">
-								<img src="img/menu/dulce.jpg" />
+						
+                        <li class="historia">
+							<a id="slidingSpacesNavigationDot_div2" class="slidingSpacesNavigationDot" href="#historia">
+								<img id="historiaImg" src="img/menu/historia.jpg" />
 							</a>
 						</li>
+                        
 						<li class="contacto">
 							<a id="slidingSpacesNavigationDot_div4" class="slidingSpacesNavigationDot" href="#contacto">
-								<img src="img/menu/interesa.jpg" />
+								<img id="contactoImg" class="" src="img/menu/interesa.jpg" />
 							</a>
 						</li>
 						<li class="recetario">
 							<a id="slidingSpacesNavigationDot_div5" class="slidingSpacesNavigationDot" href="#recetario">
-								<img src="img/menu/recetario.jpg" />
+								<img id="recetarioImg" src="img/menu/recetario.jpg" />
 							</a>
 						</li>
 					</ul>
@@ -210,44 +233,7 @@
                 </a>
 			</div>
 		</div>
-		<!--La historia-->
-		<div id="historia" class="slidingSpaces demo1" title="Historia"   >
-			<div id="contdiv2">
-				<div id="senalhist">
-					<ul id="navigation">
-						<li><a href="#" title="Historia">&#160;&#160;&#160;&#160;&#160;&#160;&#160;</a></li><!-- historia -->
-						<li><a href="#" title="Galeria">&#160;&#160;&#160;&#160;&#160;&#160;&#160;</a></li><!-- galeri --> 
-						<!--<li><a href="#" title="Dulce">&#160;&#160;&#160;&#160;&#160;&#160;&#160;</a></li><!-- dulce -->	
-					</ul>
-				</div>
-				<div id="tab_historychannel">
-					<div id="Historia">
-						<img src="img/contenido/div2/hist.png">
-					</div>
-					<div id="Galeria">
-						<img src="img/contenido/div2/gale.png">
-					</div>
-				</div>
-				<img class="pantalla" src="img/contenido/div2/pantalla.png">
-				<!--<iframe src ="img/contenido/div2/html.html" width="100%" height="100%" ></iframe>-->
-			</div>
-		</div>
-		
-			<!--Productos-->
-		<div id="productos" class="slidingSpaces demo1" title="Productos" >
-			<div id="fondtext">
-				<div id="titulo">PRESENTACIÓN<br>
-					- PET de 660 g
-				</div>
-				<div id="text">PROPIEDADES FUNCIONALES<br>
-					<p><span>• Edulcorante: </span>Se puede utilizar como un endulzante 100% natural ideal para el consumo humano de forma directa, teniendo como una de sus características principales su poder edulcorante mayor al del azúcar común, consecuentemente tiene un valor dietético.</p>
-					<p><span>• Potencializador de sabor: </span>Mejora o intensifica los sabores de otros alimentos tales como frutas, néctares, etc., esto presenta la oportunidad de formular productos con niveles reducidos de endulzantes, aderezos ácidos u otros ingredientes.</p>
-					<p><span>• Fácil asimilación</span><br>
-					Por su alto contenido de fructosa no requiere de insulina en las primeras fases de su metabolización.</p>
-					<p>Otras propiedades importantes son su alta pureza, color y transparencia natural, fácil manejo y almacenaje, excelente sabor, ahorro de calorías y no causa caries.
-				</div>
-			</div>
-		</div>
+        
 		
 		<!--Dulce Riviera-->
 		<div id="dulce" class="slidingSpaces demo1" title="" >
@@ -275,13 +261,15 @@
 					</li>
 				</ul>
 				<ul id="senaltext"><a href="#">
-					<li><a href="#historia" class="slidingSpacesNavigationDot">Galeria</li></a>
-					<li><a href="#contacto" class="slidingSpacesNavigationDot">Contacto</a></li>
-					<li><a href="#recetario" class="slidingSpacesNavigationDot">Recetario</a></li>
+					<li><a href="#historia" onClick="SelectOption(historiaImg)" class="slidingSpacesNavigationDot">Galeria</li></a>
+					<li><a href="#contacto" onClick="SelectOption(contactoImg)" class="slidingSpacesNavigationDot">Contacto</a></li>
+					<li><a href="#recetario" onClick="SelectOption(recetarioImg)" class="slidingSpacesNavigationDot">Recetario</a></li>
 				</ul>
 				<img class="slogan" src="img/contenido/div1/slogan.png">
 				<img class="senal" src="img/contenido/div1/senalamiento.png">
-				<a href="#"><img class="yt" src="img/contenido/div1/youtube.png"></a>
+				<a href="#">
+                	<img class="yt" src="img/contenido/div1/youtube.png">
+                </a>
 				<img class="bottle" src="img/contenido/div1/botella.png">
 				<!--TABBER-->
 				<div id="tab_container">
@@ -314,6 +302,45 @@
 						<img src="img/contenido/div1/tab3_2.png" border="0"/>
 					</div>
 				</div>
+			</div>
+		</div>
+        
+			<!--Productos-->
+		<div id="productos" class="slidingSpaces demo1" title="Productos" >
+			<div id="fondtext">
+				<div id="titulo">PRESENTACIÓN<br>
+					- PET de 660 g
+				</div>
+				<div id="text">PROPIEDADES FUNCIONALES<br>
+					<p><span>• Edulcorante: </span>Se puede utilizar como un endulzante 100% natural ideal para el consumo humano de forma directa, teniendo como una de sus características principales su poder edulcorante mayor al del azúcar común, consecuentemente tiene un valor dietético.</p>
+					<p><span>• Potencializador de sabor: </span>Mejora o intensifica los sabores de otros alimentos tales como frutas, néctares, etc., esto presenta la oportunidad de formular productos con niveles reducidos de endulzantes, aderezos ácidos u otros ingredientes.</p>
+					<p><span>• Fácil asimilación</span><br>
+					Por su alto contenido de fructosa no requiere de insulina en las primeras fases de su metabolización.</p>
+					<p>Otras propiedades importantes son su alta pureza, color y transparencia natural, fácil manejo y almacenaje, excelente sabor, ahorro de calorías y no causa caries.
+				</div>
+			</div>
+		</div>
+		
+		<!--La historia-->
+		<div id="historia" class="slidingSpaces demo1" title="Historia"   >
+			<div id="contdiv2">
+				<div id="senalhist">
+					<ul id="navigation">
+						<li><a href="#" title="Historia">&#160;&#160;&#160;&#160;&#160;&#160;&#160;</a></li><!-- historia -->
+						<li><a href="#" title="Galeria">&#160;&#160;&#160;&#160;&#160;&#160;&#160;</a></li><!-- galeri --> 
+						<!--<li><a href="#" title="Dulce">&#160;&#160;&#160;&#160;&#160;&#160;&#160;</a></li><!-- dulce -->	
+					</ul>
+				</div>
+				<div id="tab_historychannel">
+					<div id="Historia">
+						<img src="img/contenido/div2/hist.png">
+					</div>
+					<div id="Galeria">
+						<img src="img/contenido/div2/gale.png">
+					</div>
+				</div>
+				<img class="pantalla" src="img/contenido/div2/pantalla.png">
+				<!--<iframe src ="img/contenido/div2/html.html" width="100%" height="100%" ></iframe>-->
 			</div>
 		</div>
 		
