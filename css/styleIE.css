@@ -1,0 +1,120 @@
+html{
+	/*overflow:hidden;*/
+	height: 100%;
+	width:500%;
+}
+body{
+	height: 100%;
+	width: 5120px;
+	font: normal 1em Cambria, Georgia, serif;
+	position:absolute;
+	/*background: url(../img/bg.jpg) no-repeat left center;*/
+	/*background-size: 500% 100%;*/
+	background: url(../img/bgIE.jpg) no-repeat left center;
+}
+
+.int{
+	font-weight:normal;
+	font-size:1em;
+	text-align:left;
+	height:2000px;
+	border:1px solid red;
+	margin-top:0px;
+	float:left;
+}
+#dulce{ 
+	margin-top: -90px;
+	width: 1024px;
+	/*background: url(../img/dulce.jpg)no-repeat center center;
+	background-size: cover;*/
+}
+
+#historia{ 
+	margin-top: -90px;
+	width: 1024px;
+	/*background: url(../img/historia.jpg)no-repeat center center;
+	background-size: cover;
+	*/
+}
+#productos{ 
+	margin-top: -90px;
+	width: 1024px;
+	/*background: url(../img/productos.jpg)no-repeat center center;
+	background-size: cover;*/
+}
+#contacto{ 
+	margin-top: -90px;
+	width: 1024px;
+	/*background: url(../img/tinteresa.jpg)no-repeat center center;
+	background-size: cover;*/
+}
+#recetario{ 
+	margin-top: -90px;
+	width: 1024px;
+	/*background: url(../img/recetario.jpg)no-repeat center center;
+	background-size: cover;*/
+}
+
+.bord{
+	/*border:1px solid black;*/
+	opacity:0.75;
+	background: rgb(125,126,125); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(125,126,125,1) 0%, rgba(14,14,14,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(125,126,125,1)), color-stop(100%,rgba(14,14,14,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%); /* Opera11.10+ */
+	background: -ms-linear-gradient(top, rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%); /* IE10+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', endColorstr='#0e0e0e',GradientType=0 ); /* IE6-9 */
+	background: linear-gradient(top, rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%); /* W3C */
+	padding:20px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+#container{
+	position:absolute;
+	width:90%;
+	height:85%;
+	top:5%;
+	left:5%;
+	border:1px solid black;
+	overflow:hidden;
+}
+
+.demo1{
+	color:white;
+	/*background: #a90329; /* Old browsers 
+	background: -moz-linear-gradient(top, #a90329 0%, #8f0222 44%, #6d0019 100%); /* FF3.6+ 
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a90329), color-stop(44%,#8f0222), color-stop(100%,#6d0019)); /* Chrome,Safari4+ 
+	background: -webkit-linear-gradient(top, #a90329 0%,#8f0222 44%,#6d0019 100%); /* Chrome10+,Safari5.1+ 
+	background: -o-linear-gradient(top, #a90329 0%,#8f0222 44%,#6d0019 100%); /* Opera11.10+ 
+	background: -ms-linear-gradient(top, #a90329 0%,#8f0222 44%,#6d0019 100%); /* IE10+ 
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019',GradientType=0 ); /* IE6-9 
+	background: linear-gradient(top, #a90329 0%,#8f0222 44%,#6d0019 100%); /* W3C */
+	padding-top:12.5%;
+	text-align:center;
+	font-size:2em;
+	font-weight:bold;
+	height:100%;
+	width: 1024px;
+	float:left; overflow:hidden;
+}
+#slidingLinkMenu a{
+	/*text-decoration:none;
+	color:#3f4c6b;*/
+	text-decoratoin:underline;
+	color:red;
+}
+
+#slidingLinkMenu a:hover{
+	text-decoration:underline;
+	color:#3f4c6b;
+}
+
+
+#slidingLinkMenu li{
+	display:inline;
+	list-style-type: none;
+	padding-right: 5px;
+}
